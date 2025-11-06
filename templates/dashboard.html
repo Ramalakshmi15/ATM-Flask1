@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Welcome: {{data.name}}</h2>
+    <h3>Account No: {{accno}}</h3>
+    <h3>Balance: ₹ {{data.balance}}</h3>
+
+    <h3>Deposit</h3>
+    <form action="/deposit/{{accno}}" method="post">
+        <input type="number" name="amount" placeholder="Enter amount to deposit">
+        <button type="submit">Deposit</button>
+    </form>
+
+    <h3>Withdraw</h3>
+    <form action="/withdrawn/{{accno}}" method="post">
+        <input type="number" name="amount" placeholder="Enter amount to withdrawn">
+        <button type="submit">Withdraw</button>
+    </form>
+
+    <br>
+    <a href="/delete/{{accno}}">Delete Account</a>
+</body>
+</html>
